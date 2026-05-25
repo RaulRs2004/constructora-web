@@ -1,73 +1,264 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maguiña & Mallqui</title>
-<link
-rel="stylesheet"
-href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maguiña & Mallqui</title>
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Maguiña Y Mallqui</h1>
+    <!-- HEADER -->
+    <header>
 
-    <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contacto</a>
-    </nav>
-</header>
+        <h1>Maguiña & Mallqui</h1>
 
-<section id="inicio" class="hero">
-    <h2>Construimos tus sueños</h2>
-    <p>Especialistas en construcción y remodelación.</p>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
 
-    <button>Solicitar Cotización</button>
+    </header>
+
+    <!-- INICIO -->
+    <section id="inicio" class="hero">
+
+        <div class="hero-contenido">
+
+            <span class="subtitulo">
+                Maguiña & Mallqui
+            </span>
+
+            <h2>
+                Construimos tus sueños
+            </h2>
+
+            <p>
+                Especialistas en construcción, remodelación y diseño
+                arquitectónico. Creamos espacios modernos, seguros
+                y de alta calidad.
+            </p>
+
+            <a
+                href="https://wa.me/51921662231?text=Quiero%20solicitar%20cotizacion"
+                target="_blank"
+            >
+
+                <button>
+                    Solicitar Cotización
+                </button>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- NOSOTROS -->
+    <section
+        id="nosotros"
+        class="nosotros"
+        data-aos="fade-up"
+    >
+
+        <div class="nosotros-texto">
+
+            <h2>Nosotros</h2>
+
+            <p class="descripcion">
+                Somos una empresa con amplia experiencia en proyectos
+                residenciales, comerciales e industriales.
+                Nos especializamos en brindar soluciones modernas,
+                seguras y de alta calidad, acompañando cada obra
+                desde la planificación hasta la entrega final.
+            </p>
+
+            <div class="lista-servicios">
+
+                <div class="item active" onclick="mostrarImagen(1)">
+                    ✅ Venta de Materiales para Construcción
+                </div>
+
+                <div class="item" onclick="mostrarImagen(2)">
+                    ✅ Manufactura de Estructuras Metálicas
+                </div>
+
+                <div class="item" onclick="mostrarImagen(3)">
+                    ✅ Servicios de Construcción y Remodelación
+                </div>
+
+                <div class="item" onclick="mostrarImagen(4)">
+                    ✅ Proyectos para Obras Civiles, Arquitectura e Industriales
+                </div>
+
+                <div class="item" onclick="mostrarImagen(5)">
+                    ✅ Diseños Estructurales en Drywall y Aluminio
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="nosotros-imagen">
+
+            <img
+                id="img1"
+                class="imagen-opcion activa"
+                src="images/Venta.png"
+                alt="Materiales"
+            >
+
+            <img
+                id="img2"
+                class="imagen-opcion"
+                src="images/Manufactura.png"
+                alt="Estructuras metálicas"
+            >
+
+            <img
+                id="img3"
+                class="imagen-opcion"
+                src="images/Servicio.png"
+                alt="Remodelación"
+            >
+
+            <img
+                id="img4"
+                class="imagen-opcion"
+                src="images/Proyectos.png"
+                alt="Obras civiles"
+            >
+
+            <img
+                id="img5"
+                class="imagen-opcion"
+                src="images/Diseños_drywall.png"
+                alt="Drywall"
+            >
+
+        </div>
+
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios">
+
+        <h2>Servicios</h2>
+
+        <div class="cards">
+
+            <div
+                class="card"
+                data-aos="zoom-in"
+                data-aos-duration="2000"
+            >
+
+                <img
+                    src="images/construccion.png"
+                    alt="Construcción"
+                >
+
+                <h3>Construcción</h3>
+
+                <p>
+                    Construimos proyectos modernos y seguros.
+                </p>
+
+            </div>
+
+            <div
+                class="card"
+                data-aos="zoom-in"
+                data-aos-duration="2000"
+            >
+
+                <img
+                    src="images/remodelacion.png"
+                    alt="Remodelación"
+                >
+
+                <h3>Remodelación</h3>
+
+                <p>
+                    Renovamos espacios residenciales y comerciales.
+                </p>
+
+            </div>
+
+            <div
+                class="card"
+                data-aos="zoom-in"
+                data-aos-duration="2000"
+            >
+
+                <img
+                    src="images/arquitectura.jpg"
+                    alt="Arquitectura"
+                >
+
+                <h3>Arquitectura</h3>
+
+                <p>
+                    Diseños arquitectónicos modernos y elegantes.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contacto">
+
+
+<h2>Contáctanos</h2>
+
+<form class="formulario">
+
+<input type="text" placeholder="Nombre">
+<input type="email" placeholder="Correo">
+<textarea placeholder="Mensaje"></textarea>
+
+<button>Enviar</button>
+
+</form>
+
 </section>
 
-<section id="nosotros" data-aos="fade-up">
-    <h2>Nosotros</h2>
+    <!-- CONTACTO -->
+    <section id="contacto">
 
-    <p>
-    Somos una empresa con experiencia en proyectos
-    residenciales y comerciales.
-    </p>
-</section>
+        <h2>Contacto</h2>
 
-<section id="servicios">
-    <h2>Servicios</h2>
+        <p>WhatsApp: 921 662 231</p>
 
-    <div class="cards">
-    <div class="card" data-aos="zoom-in" data-aos-duration="2000">
-        <h3>Construcción</h3>
-    </div>
+        <p>Email: mmconstruccionessac@gmail.com</p>
 
-    <div class="card" data-aos="zoom-in" data-aos-duration="2000">
-        <h3>Remodelación</h3>
-    </div>
+    </section>
 
-    <div class="card" data-aos="zoom-in" data-aos-duration="2000">
-        <h3>Arquitectura</h3>
-    </div>
-    </div>
-</section>
+    
 
-<section id="contacto">
-    <h2>Contacto</h2>
+    <!-- SCRIPTS -->
+    <script src="script.js"></script>
 
-    <p>WhatsApp: 947 132 882</p>
-    <p>Email: mmconstruccionessac@gmail.com</p>
-</section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<script src="script.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script>
-AOS.init();
-</script>
+    <script>
+        AOS.init();
+    </script>
+<a href="https://wa.me/504XXXXXXXX"
+class="whatsapp"
+target="_blank">
+💬
+</a>
 </body>
 </html>

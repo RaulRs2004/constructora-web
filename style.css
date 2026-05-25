@@ -1,77 +1,354 @@
+/* RESET */
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-font-family:Arial, sans-serif;
-line-height:1.6;
+    font-family:Arial, sans-serif;
+    line-height:1.6;
+    padding-top:80px;
+    background:#f9f9f9;
 }
 
+/* HEADER */
 header{
-background:#1f2937;
-color:white;
-padding:20px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(31,41,55,0.95);
+    backdrop-filter:blur(10px);
+    color:white;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
 
-display:flex;
-justify-content:space-between;
-align-items:center;
+header h1{
+    font-size:28px;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+    transition:0.3s;
 }
 
+nav a:hover{
+    color:#25D366;
+}
+
+/* HERO */
 .hero{
-height:90vh;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+    background:
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.45)
+        ),
+        url("images/fondo.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
 
-background:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd')
-center/cover;
+.hero-contenido{
+    max-width:650px;
+    color:white;
+}
 
-color:white;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-
-text-align:center;
+.subtitulo{
+    display:inline-block;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:20px;
+    padding:8px 16px;
+    background:rgba(255,255,255,.12);
+    border-radius:50px;
+    backdrop-filter:blur(6px);
 }
 
 .hero h2{
-font-size:60px;
+    font-size:72px;
+    line-height:1.1;
+    margin-bottom:20px;
 }
 
 .hero p{
-font-size:22px;
-margin:20px 0;
+    font-size:22px;
+    line-height:1.7;
+    margin-bottom:35px;
+    color:#f8fafc;
 }
 
-button{
-padding:15px 30px;
-border:none;
-background:orange;
-color:white;
-font-size:18px;
-cursor:pointer;
+/* BOTONES */
+button,
+.hero button{
+    background:#22c55e;
+    color:white;
+    padding:16px 34px;
+    border:none;
+    border-radius:14px;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 10px 25px rgba(34,197,94,.25);
+    transition:.3s;
 }
 
+button:hover,
+.hero button:hover{
+    transform:translateY(-4px);
+    background:#16a34a;
+}
+
+/* SECCIONES */
 section{
-padding:80px 10%;
+    padding:100px 10%;
 }
 
+section h2{
+    font-size:45px;
+    text-align:center;
+    margin-bottom:50px;
+    color:#1f2937;
+}
+
+/* SERVICIOS */
 .cards{
-display:flex;
-gap:20px;
-margin-top:30px;
+    display:flex;
+    gap:25px;
+    margin-top:30px;
 }
 
 .card{
-background:#f4f4f4;
-padding:40px;
-flex:1;
-border-radius:10px;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+    flex:1;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:20px 20px 10px;
+    font-size:24px;
+    color:#1f2937;
+}
+
+.card p{
+    padding:0 20px 20px;
+    color:#555;
+}
+
+/* NOSOTROS */
+.nosotros{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+}
+
+.nosotros-texto{
+    flex:1;
+}
+
+.nosotros-texto h2{
+    font-size:45px;
+    margin-bottom:20px;
+    color:#1f2937;
+}
+
+.descripcion{
+    font-size:18px;
+    color:#555;
+    margin-bottom:30px;
+    line-height:1.8;
+}
+
+.lista-servicios{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.item{
+    background:white;
+    padding:15px 20px;
+    border-radius:10px;
+    font-size:17px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.item:hover{
+    transform:translateX(10px);
+    background:#25D366;
+    color:white;
+}
+
+.item.active{
+    transform:translateX(10px);
+    background:#25D366;
+    color:white;
+}
+
+/* IMÁGENES NOSOTROS */
+.nosotros-imagen{
+    flex:1;
+    position:relative;
+    min-height:420px;
+}
+
+.nosotros-imagen img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.imagen-opcion{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    opacity:0;
+    visibility:hidden;
+    transition:.4s ease;
+}
+
+.imagen-opcion.activa{
+    opacity:1;
+    visibility:visible;
+}
+
+/* CONTACTO */
+.contacto{
+    text-align:center;
+    background:#1f2937;
+    color:white;
+}
+
+.contacto p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+/* FORMULARIO */
+.formulario{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.formulario input,
+.formulario textarea{
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+}
+
+.formulario textarea{
+    min-height:150px;
+}
+
+/* FOOTER */
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.whatsapp{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:white;
+    font-size:28px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+    z-index:1000;
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav{
+        margin-top:10px;
+    }
+
+    .hero{
+        text-align:center;
+        justify-content:center;
+        padding:0 5%;
+    }
+
+    .hero h2{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .cards{
+        flex-direction:column;
+    }
+
+    .nosotros{
+        flex-direction:column;
+    }
+
+    .nosotros-texto h2{
+        font-size:35px;
+        text-align:center;
+    }
+
+    .descripcion{
+        text-align:center;
+    }
+
+    section{
+        padding:80px 5%;
+    }
 }
