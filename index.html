@@ -18,13 +18,23 @@
     <!-- HEADER -->
     <header>
 
-        <h1>Maguiña & Mallqui</h1>
+        <div class="logo-empresa">
+
+            <img
+                src="images/logo.png"
+                alt="Logo Maguiña y Mallqui"
+            >
+
+            <h1>Maguiña & Mallqui</h1>
+
+        </div>
 
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#nosotros">Nosotros</a>
             <a href="#servicios">Servicios</a>
             <a href="#contacto">Contacto</a>
+            <a href="#datos-contacto">Contáctanos</a>
         </nav>
 
     </header>
@@ -33,10 +43,6 @@
     <section id="inicio" class="hero">
 
         <div class="hero-contenido">
-
-            <span class="subtitulo">
-                Maguiña & Mallqui
-            </span>
 
             <h2>
                 Construimos tus sueños
@@ -64,90 +70,65 @@
     </section>
 
     <!-- NOSOTROS -->
-    <section
-        id="nosotros"
-        class="nosotros"
-        data-aos="fade-up"
-    >
+<section id="nosotros">
 
-        <div class="nosotros-texto">
+    <div class="contenedor-nosotros">
+
+        <!-- IZQUIERDA -->
+        <div class="info-nosotros">
 
             <h2>Nosotros</h2>
 
             <p class="descripcion">
-                Somos una empresa con amplia experiencia en proyectos
-                residenciales, comerciales e industriales.
-                Nos especializamos en brindar soluciones modernas,
-                seguras y de alta calidad, acompañando cada obra
-                desde la planificación hasta la entrega final.
+                Somos una empresa con experiencia en construcción,
+                arquitectura y servicios integrales para hogares,
+                negocios y proyectos industriales.
             </p>
 
-            <div class="lista-servicios">
+            <div class="opciones-nosotros">
 
-                <div class="item active" onclick="mostrarImagen(1)">
-                    ✅ Venta de Materiales para Construcción
+                <div class="opcion active"
+                    onclick="mostrarImagen('materiales', this)">
+                    ✅ Venta de materiales para Construcción
                 </div>
 
-                <div class="item" onclick="mostrarImagen(2)">
-                    ✅ Manufactura de Estructuras Metálicas
+                <div class="opcion"
+                    onclick="mostrarImagen('maquinaria', this)">
+                    ✅ Maquinaria pesada de Construcción
                 </div>
 
-                <div class="item" onclick="mostrarImagen(3)">
-                    ✅ Servicios de Construcción y Remodelación
+                <div class="opcion"
+                    onclick="mostrarImagen('obras', this)">
+                    ✅ Proyectos para obras civiles de Arquitectura e Industriales
                 </div>
 
-                <div class="item" onclick="mostrarImagen(4)">
-                    ✅ Proyectos para Obras Civiles, Arquitectura e Industriales
+                <div class="opcion"
+                    onclick="mostrarImagen('construccion', this)">
+                    ✅ Servicios de Construcción, Remodelación y Arquitectura
                 </div>
 
-                <div class="item" onclick="mostrarImagen(5)">
-                    ✅ Diseños Estructurales en Drywall y Aluminio
+                <div class="opcion"
+                    onclick="mostrarImagen('drywall', this)">
+                    ✅ Diseños estructurales de Drywall y Aluminio
                 </div>
 
             </div>
 
         </div>
 
-        <div class="nosotros-imagen">
+        <!-- DERECHA -->
+        <div class="imagen-nosotros">
 
             <img
-                id="img1"
-                class="imagen-opcion activa"
-                src="images/Venta.png"
-                alt="Materiales"
-            >
-
-            <img
-                id="img2"
-                class="imagen-opcion"
-                src="images/Manufactura.png"
-                alt="Estructuras metálicas"
-            >
-
-            <img
-                id="img3"
-                class="imagen-opcion"
-                src="images/Servicio.png"
-                alt="Remodelación"
-            >
-
-            <img
-                id="img4"
-                class="imagen-opcion"
-                src="images/Proyectos.png"
-                alt="Obras civiles"
-            >
-
-            <img
-                id="img5"
-                class="imagen-opcion"
-                src="images/Diseños_drywall.png"
-                alt="Drywall"
-            >
+                id="imagen-servicio"
+                src="images/construccion.png"
+                alt="Servicio">
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
     <!-- SERVICIOS -->
     <section id="servicios">
@@ -217,35 +198,90 @@
 
     </section>
 
-    <section id="contacto">
-
-
-<h2>Contáctanos</h2>
-
-<form class="formulario">
-
-<input type="text" placeholder="Nombre">
-<input type="email" placeholder="Correo">
-<textarea placeholder="Mensaje"></textarea>
-
-<button>Enviar</button>
-
-</form>
-
-</section>
-
     <!-- CONTACTO -->
-    <section id="contacto">
+    <section id="contacto" class="formulario-contacto">
 
-        <h2>Contacto</h2>
+        <h2>Formulario de contacto</h2>
 
-        <p>WhatsApp: 921 662 231</p>
+        <p>
+            Cuéntanos sobre tu proyecto y te responderemos pronto.
+        </p>
 
-        <p>Email: mmconstruccionessac@gmail.com</p>
+        <form class="formulario">
+
+            <div class="fila">
+
+                <input
+                    type="text"
+                    placeholder="Nombre"
+                    required>
+
+                <input
+                    type="text"
+                    placeholder="Apellido"
+                    required>
+
+            </div>
+
+            <div class="fila">
+
+                <input
+                    type="tel"
+                    placeholder="Número telefónico"
+                    required>
+
+                <input
+                    type="email"
+                    placeholder="Correo electrónico"
+                    required>
+
+            </div>
+
+            <select required>
+
+                <option value="">
+                    ¿El trabajo es para?
+                </option>
+
+                <option>
+                    Persona
+                </option>
+
+                <option>
+                    Empresa
+                </option>
+
+            </select>
+
+            <textarea
+                placeholder="Escribe tu mensaje..."
+                required>
+            </textarea>
+
+            <button type="submit">
+                Enviar mensaje
+            </button>
+
+        </form>
 
     </section>
 
-    
+    <!-- DATOS DE CONTACTO -->
+<section class="contacto" id="datos-contacto">
+    <h2>Contáctanos</h2>
+
+    <div class="contacto-contenido">
+
+        <img src="images/logo.png" alt="Logo MM Construcciones" class="contacto-logo">
+
+        <div class="contacto-datos">
+            <p><i class="fab fa-telefono"></i> Teléfono: 990 710 418 - 991 275 916</p>
+            <p><i class="fas fa-phone"></i> Número fijo: 01 484 7980</p>
+            <p><i class="fas fa-envelope"></i> Email: mmconstruccionessac@gmail.com</p>
+        </div>
+
+    </div>
+</section>
 
     <!-- SCRIPTS -->
     <script src="script.js"></script>
@@ -255,10 +291,17 @@
     <script>
         AOS.init();
     </script>
-<a href="https://wa.me/504XXXXXXXX"
-class="whatsapp"
-target="_blank">
-💬
+
+    <a
+    href="https://wa.me/51921662231"
+    class="whatsapp"
+    target="_blank"
+>
+    <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp"
+    >
 </a>
+
 </body>
 </html>

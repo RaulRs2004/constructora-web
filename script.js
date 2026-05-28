@@ -1,24 +1,26 @@
 console.log("Página cargada");
-function mostrarImagen(numero){
 
-    const imagenes =
-        document.querySelectorAll(".imagen-opcion");
+function mostrarImagen(tipo, elemento) {
 
-    const items =
-        document.querySelectorAll(".item");
+    const imagen =
+        document.getElementById("imagen-servicio");
 
-    imagenes.forEach(img=>{
-        img.classList.remove("activa");
-    });
+    const imagenes = {
+        materiales: "images/Venta.png",
+        maquinaria: "images/Maquinaria.png",
+        obras: "images/Proyectos.png",
+        construccion: "images/Servicio.png",
+        drywall: "images/Diseños_drywall.png"
+    };
 
-    items.forEach(item=>{
-        item.classList.remove("active");
-    });
+    imagen.src = imagenes[tipo];
 
     document
-        .getElementById("img" + numero)
-        .classList.add("activa");
+        .querySelectorAll(".opcion")
+        .forEach(opcion => {
+            opcion.classList.remove("active");
+        });
 
-    items[numero - 1]
-        .classList.add("active");
+    elemento.classList.add("active");
 }
+
